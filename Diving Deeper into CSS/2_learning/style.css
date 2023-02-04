@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+#product-overview {
+  padding: 10px;
+  background-color: rgb(227, 88, 88);
+}
+
+header {
+  width: 50%;
+}
+
+header > div {
+  display: inline-block;
+}
+
+.main-nav {
+  display: inline-block;
+  text-align: right;
+  /* width: 100%; */
+  /* all the .main-nav links are moved to a new line, since they are trying to capture the full width of its parent */
+  /*instead the width can be set to the (total width its parent element) - (the element's width which is present in the same line) as below*/
+  width: calc(100% - 59px);
+  /*NOTE: you will see no changes even after setting the above property, and that is because of how the inline-block works, the solution to this is to  */
+}
+.main-nav__items {
+  display: inline-block;
+  list-style: none;
+}
+
+.main-nav__item {
+  display: inline-block;
+}

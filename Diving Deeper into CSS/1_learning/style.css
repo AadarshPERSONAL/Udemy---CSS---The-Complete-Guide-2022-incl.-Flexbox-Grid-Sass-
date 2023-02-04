@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  /*box-sizing property doesn't work here because each element by browser default has its own box model which will overwrite the inherited box-sizing property, hence we should use box-sizing inside the universal selector(since, * selector explicitly sets the property to each element in the HTML)*/
+  /* box-sizing: border-box; */
+}
+
+/* box-sizing: if we provide padding or border the actual width would be the (content + padding + border) (excluding margin),and the content size would be without the (padding + border), but, we have a property called "box-sizing: border-box;" to ensure that the width of the content includes padding and border */
+/*NOTE: the page alignment breaks if width is set to 100%, so, better use the box-sizing property and set it to "border-box" and remove any margin if exists*/
+#product-overview {
+  background: #ff1b68;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: 5px solid black;
+  /* margin: 20px; */
+  /* box-sizing: border-box; */
+}
+
+.section-title {
+  color: #2ddf5c;
+}
+
+#product-overview h1 {
+  color: white;
+  font-family: "Anton", sans-serif;
+}
+
+/*********** making the 2 sibling elements inlined **********8*/
+
+section p,
+section a {
+  display: inline;
+}
+
+/**************************************************************/
+
+/*according to the theory an elements max height is bound under its parent element and its parent element says my max height is what my child elements needs to be, so, it makes a contradictory loop*/
+
+/* so to overcome that, we can just set its parent element's height to 100% till the very end of <html> element */
+
+/*but, if height is set to 100% for below selectors, then why does the <html> element's height is not the whole page size? */
+/* main,
+body,
+html {
+  height: 100%;
+} */
