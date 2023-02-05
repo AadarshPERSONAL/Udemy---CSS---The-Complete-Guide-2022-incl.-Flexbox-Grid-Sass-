@@ -1,5 +1,4 @@
 * {
-  font-size: large;
   margin: 0;
   padding: 0;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -7,15 +6,25 @@
 }
 #product-overview {
   padding: 10px;
+  background: url(images/jason-hogan-YyFwUKzv5FM-unsplash_small.jpg);
   background-color: rgb(227, 88, 88);
+  height: 500px;
 }
 
 header {
-  width: 50%;
+  background-color: aquamarine;
 }
 
 header > div {
   display: inline-block;
+  vertical-align: middle;
+}
+
+.main-nav__brandName {
+  color: rgb(36, 35, 36);
+  font-size: 35px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .main-nav {
@@ -24,8 +33,9 @@ header > div {
   /* width: 100%; */
   /* all the .main-nav links are moved to a new line, since they are trying to capture the full width of its parent */
   /*instead the width can be set to the (total width its parent element) - (the element's width which is present in the same line) as below*/
-  width: calc(100% - 59px);
+  width: calc(100% - 120px);
   /*NOTE: you will see no changes even after setting the above property, and that is because of how the inline-block works, the solution to this is to  */
+  vertical-align: middle;
 }
 .main-nav__items {
   display: inline-block;
@@ -34,4 +44,50 @@ header > div {
 
 .main-nav__item {
   display: inline-block;
+  padding: 0px 20px;
+  text-decoration: none; /* will not work, since child element <a> tag will overwrite the text-decoration property (which is the 'underline' as default for <a> tag) */
+}
+
+.main-nav__item a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* psuedo class */
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+  color: white;
+  border-bottom: 3px solid white;
+}
+
+/* psuedo element */
+
+.main-nav__item a::after {
+  /* content: "  (link)"; */
+  content: attr(data);
+  color: rgb(214, 4, 4);
+  display: inline-block;
+}
+
+section[id="plans"] p::first-letter {
+  font-size: 40px;
+  color: brown;
+}
+
+.main-nav__special a {
+  /* here the order DOES matter(between specifying group classes on this <a> tag- "main-nav__item" & "main-nav__special"), because we will overwrite some rules to make it a special element, so, we are targetting "main-nav__special" after "main-nav__item" class*/
+  color: rgb(179, 42, 42);
+  background-color: brown;
+  color: aliceblue;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.main-nav__special a:hover,
+.main-nav__special a:active {
+  border-bottom: 3px solid white;
+  background-color: aliceblue;
+  color: brown;
+  border: none;
 }
