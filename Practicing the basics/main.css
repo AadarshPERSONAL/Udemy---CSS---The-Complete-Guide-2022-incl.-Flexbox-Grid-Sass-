@@ -1,0 +1,144 @@
+
+
+#product-overview {
+    background: url("img/freedom.jpg");
+    width: 100%;
+    height: 528px;
+    padding: 10px;   
+}
+
+.section-title {
+    color: #2ddf5c;
+    text-align: center;
+}
+
+#product-overview h1 {
+    color: white;
+    font-family: 'Anton', sans-serif;
+}
+
+
+
+/* h1 {
+    font-family: sans-serif;
+} */
+
+
+
+/********************* css for "plan" section  **********************/
+
+.plans__list{
+    width: 80%;
+     margin: auto; 
+     text-align: center;
+}
+
+.plan{
+    background-color: #b5e2c1;
+    display: inline-block;
+    padding: 16px;
+    margin: 10px;
+    width: 30%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* .plan :not(li):not(ul){
+    text-align: center;
+} */
+
+.plan__highlighted{
+    background-color: #1b622f;
+    color: white ;
+    box-shadow: 2px 2px 3px 3px rgba(0,0,0,0.5); /* box-shadow: x-axis y-axis blurValue spreadValue Color */
+}
+
+.plan__focus{
+    background-color: white;
+    color: #1b622f;
+    text-align: center;
+    box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.plan__features{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.plan__feature{
+    margin: 8px;
+}
+
+.plan__title{
+    color: #4d8f72;
+    font-size: 30px;
+}
+
+.plan__price{
+    color: grey;
+}
+
+.plan__highlighted .plan__price{
+    font-size: 40px;
+    color: #4d8f72;;
+}
+.plan__highlighted .plan__title{
+    color: white;
+}
+
+.button{
+    font: inherit; /* it is in our case is inheriting from the body element's font */
+    border: inherit; /* we have not defined our parent's border, but still it works, maybe this is setting it to default, CHECK & CONFIRM */
+    padding: 8px;
+    margin-top: 50px;
+    background-color: #4a7965;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight:  bold;
+}
+
+.button:hover,
+.button:active{
+    background-color: white;
+    color: #4a7965;
+    text-decoration: underline;
+}
+
+.button:focus-visible{
+    outline: none /*outline is kind of outside the border but inside the margin, kind of an extra layer */
+}
+
+/**********************Core feature section*************************/
+
+.core-features{
+    margin-top: 80px;
+    padding: 30px;
+    background-color: rgb(249, 84, 84);
+}
+.core-features__title{
+    margin: 30px ;
+    text-align: center;
+}
+.core-features__list{
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+
+.core-feature{
+    display: inline-block;
+    width: 32%; /* we have three <li> element, so (32*3)% = 96%, which is under 100%, so line will not break;*/
+    text-align: center;
+    vertical-align: top;
+}
+.core-feature__img{
+    background-color:aquamarine;
+    height: 80px;
+    width: 80px;
+    border: 1px solid black; 
+    border-radius: 50%;
+    margin: auto; /*sets the margin to fill exactly symmetrical spaces HORIZONTALY, vertically it doen't work*/
+}
+
