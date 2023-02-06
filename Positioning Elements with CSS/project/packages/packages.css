@@ -17,7 +17,7 @@ main {
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: -1; /*only works if there is a position property set, default value is 0/auto */
+  z-index: -1; /*default value is 0/auto */
 }
 
 .plans:hover {
