@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+/**********************main-header**********************/
+
+.main-header {
+  position: fixed;
+  /*even if we have a parent element with some margin set, this top,left,right,bottom properties will ignore it, and will always the position-context as viewport  */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #2ddf5c;
+  padding: 8px 16px;
+  z-index: 1;
+}
+
+.main-header > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main-header__brand {
+  color: #0e4f1f;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.main-nav {
+  display: inline-block;
+  text-align: right;
+  width: calc(100% - 74px);
+  vertical-align: middle;
+}
+
+.main-nav__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+.main-nav__item a {
+  text-decoration: none;
+  color: #0e4f1f;
+  font-weight: bold;
+  padding: 3px 0;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+  color: white;
+  border-bottom: 5px solid white;
+}
+
+.main-nav__item--cta a {
+  color: white;
+  background: #ff1b68;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active {
+  color: #ff1b68;
+  background: white;
+  border: none;
+}
+
+/*******************************footer****************************/
+.main-footer {
+  background-color: black;
+}
+.main-footer__links {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.main-footer__link {
+  display: inline-block;
+  margin: 10px;
+}
+
+.main-footer__link > a {
+  /*we cannt set the color on .main-footer__link to expect the color of our <a> text to change, because, <a> tag has its own default color which will overwrite our inherited color, hence, selecting the <a> tag itself to change this property */
+  color: white;
+  text-decoration: none;
+}
+
+.main-footer__link a:hover,
+.main-footer__link a:active {
+  color: rgb(188, 178, 178);
+  text-decoration: underline;
+}

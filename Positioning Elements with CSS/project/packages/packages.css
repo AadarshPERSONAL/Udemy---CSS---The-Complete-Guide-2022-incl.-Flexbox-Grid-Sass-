@@ -1,0 +1,88 @@
+main {
+  margin-top: 50px;
+}
+/* here we encounter the margin-collapsing concept, between "main" & ".plans", the bigger margin wins */
+.plans {
+  position: relative;
+  border: 4px solid rgb(60, 88, 70);
+  border-left: none;
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 85%;
+  background-color: rgb(192, 222, 192);
+}
+
+.background {
+  background: url(../img/ball.jpg);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /*only works if there is a position property set, default value is 0/auto */
+}
+
+.plans:hover {
+  /* border-color: red !important;*/ /* avoid this if possible */
+  border-color: red;
+}
+
+.plans__link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.plans__badge {
+  position: absolute; /* this position also removes the element from the document flow, but it checks for the parent element to have a "relative" as the position value to set its position-context to, and if it finds no parent element with such position element, the position-context will be simply the viewport */
+  top: 10px;
+  right: 15px;
+  margin: 0;
+  background-color: rgb(204, 103, 53);
+  font-size: 10px;
+  padding: 8px;
+}
+
+.plans__title {
+  color: black;
+}
+
+.plan {
+  color: rgb(127, 119, 119);
+}
+
+.plan__content {
+  background-color: white;
+  color: rgb(60, 88, 70);
+  font-weight: bold;
+  padding: 16px;
+  border: 2px solid rgb(60, 88, 70);
+}
+
+/*for free*/
+#free {
+  float: right; /*float: is not used nowadays for many reasons, float actulally do remove the element out of the document FLOW, which is a bad practice for normal use, it can be used for rare & special caseses */
+  /*instead we use many other positioning techniques in css (like- flex)*/
+  text-align: right;
+  /* border: 4px solid rgb(60, 88, 70); */
+  border-right: none;
+  border-left: 4px solid rgb(60, 88, 70);
+}
+
+#free:hover,
+#free:active {
+  border-color: red;
+}
+
+.clearFIX {
+  clear: both; /* it keeps the other elements in there originl place, as if float never existed */
+}
+
+/*for premium*/
+#premium {
+  background-color: rgb(0, 93, 0);
+}
+#premium .plans__title {
+  color: white;
+}
+#premium .plan {
+  color: rgb(159, 192, 159);
+}

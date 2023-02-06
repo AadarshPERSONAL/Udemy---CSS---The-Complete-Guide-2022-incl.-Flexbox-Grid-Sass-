@@ -1,0 +1,53 @@
+html {
+  background: #b3b3b3;
+  padding: 15px;
+  border: 5px solid white;
+  margin: 15px;
+  height: 2000px;
+}
+
+body {
+  background: #fa923f;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 0;
+}
+
+.parent {
+  background: white;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 25px;
+}
+
+.parent div
+/* ,.parent span  */ {
+  background: rgb(105, 105, 109);
+  color: white;
+  padding: 10px;
+  border: 5px solid black;
+  margin: 10px;
+}
+
+/**********position: fixed;***********/
+.parent .child-1 {
+  position: fixed;
+  /*NOTE: whether the element is an inline/block/inline-block element by nature, after applying "position: fixed", it behaves like an inline-block element */
+  /* this behaves like an inline-block element now and is out of the document flow*/
+  /*NOTE:positioning context will be the viewport */
+  top: 0;
+  /* top,left,right,bottom properties to 0 ensure the margin of the parent element is ignored */
+  left: 0;
+  width: 100%;
+  margin: 0; /* inherited margin is its parent element ".parent" in our case, so we need to overwrite it here */
+  box-sizing: border-box;
+}
+
+/*******position: relative *******/
+
+.parent .child-2 {
+  position: relative; /* using relative doesn't let the element to get out of the document flow */
+  /*NOTE: unlike fixed and absolute,the position-context for relative is its current/original position */
+  top: 300px; /* so, it calculates the position relative to its current position */
+  left: 9%;
+}
