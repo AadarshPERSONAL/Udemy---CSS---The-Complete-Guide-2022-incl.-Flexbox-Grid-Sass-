@@ -1,5 +1,8 @@
 #product-overview {
-  background: url("freedom.jpg");
+  background: url("images/freedom.jpg");
+  /* background-color: red; */
+    /*background-image will always overwrite background-color by default */
+    background-size: 100%;
   /* background-size: cover; */
   /* background-size: contain; */ /*it doesn't take into account the available space of its element to fill up, it just resize itself according to the size of the image */
   background-repeat: no-repeat;
@@ -21,6 +24,8 @@
   width: 100%;
   height: 528px;
   padding: 10px;
+  /*using shorthand for background-*/
+  /* background: url("freedom.jpg") top 20% bottom 20%/cover no-repeat border-box; */
 }
 
 .section-title {

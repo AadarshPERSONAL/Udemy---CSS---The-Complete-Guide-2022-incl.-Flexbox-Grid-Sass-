@@ -19,10 +19,18 @@ body {
 }
 
 .main-header__brand {
+    /*below text properties will be useful for <img> alt attribute, when image is not available */
+    display: inline-block;
     color: #0e4f1f;
     text-decoration: none;
     font-weight: bold;
     font-size: 22px;
+    height: 30px;
+}
+
+.main-header__brand img{
+    /* height: 40px; */
+    height: 100%;/* this will not work, until its parent element is not "inlin-block" or "block" element, if it is "inline" the parent will be itself*/
 }
 
 .main-nav {
