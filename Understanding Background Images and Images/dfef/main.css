@@ -1,11 +1,11 @@
 #product-overview {
-  background: url("images/freedom.jpg");
+  /* background: url("images/freedom.jpg"); */
   /* background-color: red; */
-    /*background-image will always overwrite background-color by default */
-    background-size: 100%;
+  /*background-image will always overwrite background-color by default */
+  /* background-size: 100%; */
   /* background-size: cover; */
   /* background-size: contain; */ /*it doesn't take into account the available space of its element to fill up, it just resize itself according to the size of the image */
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   /*background-position: 10px 20px;*/ /* background-position: (left)px (top)px */
   /*background-position: 0% 40%;*/ /*the specified percentage will be croped out of the image, background-position: (left)% (top)% */
   /*NOTE:default value for (top)% is 50%*/
@@ -13,19 +13,34 @@
   /* background-position: left top; */ /* this specifies the image is not croped from left and top */
   /* background-position: left bottom; */ /* this specifies the image is not croped from left and bottom */
   /*background-position: top 20% bottom 20%;*/ /*crop 20% from top and 20% to bottom */
-  background-origin: border-box;
+  /* background-origin: border-box; */
   /* element will start from border of the box */
   /*background-origin: content-box;*/ /* element will start from content of the box */
   /*background-origin: padding-box;*/ /* element will start from padding of the box */
 
   /*background-clip: padding-box;*/ /*everything outside of the padding will be clipped off from all the sides of the box */
   /*background-clip: content-box;*/ /*everythig outside of the content will be clipped/removed from all the sides except the content*/
-  border: 10px dotted red;
+  /* border: 10px dotted red; */
   width: 100%;
-  height: 528px;
+  height: 870px;
   padding: 10px;
   /*using shorthand for background-*/
-  /* background: url("freedom.jpg") top 20% bottom 20%/cover no-repeat border-box; */
+  /* background: url("freedom.jpg") top 20% bottom 20% / cover no-repeat border-box; */
+
+  /************Multiple Backgrounds***********/
+  background: linear-gradient(
+      to bottom right,
+      rgb(106, 106, 105),
+      70%,
+      transparent
+    ),
+    url("images/freedom.jpg") left 10% bottom 20% / cover no-repeat border-box,
+    red;
+
+  /********gradients: linear & radial ********/
+  /* background-image: linear-gradient(to bottom right, black, 70%, red); */
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  /* background-image: radial-gradient() */
 }
 
 .section-title {
@@ -125,6 +140,7 @@
   border: 2px solid #424242;
   border-radius: 50%;
   margin: auto;
+  padding: 25px;
 }
 
 .key-feature__description {
