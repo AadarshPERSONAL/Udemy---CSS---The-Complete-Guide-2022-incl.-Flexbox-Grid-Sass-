@@ -1,1 +1,4 @@
-skipped: section 8(size and units) and 9(working with js and css)
+skipped:
+ section 8(size and units)
+ section 9(working with js and css)
+ section 12(working with text and font)
